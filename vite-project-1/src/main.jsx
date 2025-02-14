@@ -14,8 +14,5 @@ function MyApp() {  //Fast refresh only works when a file has exports. Move your
 
 createRoot(document.getElementById('root'))
 .render(
-  <StrictMode>
-    <App />
-    <MyApp/>
-  </StrictMode>,
+  MyApp()
 )
