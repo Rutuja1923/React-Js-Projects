@@ -12,7 +12,11 @@ function MyApp() {  //Fast refresh only works when a file has exports. Move your
   );
 }
 
+const anotherReactElement = (
+  <a href='https://www.google.com/' target='_blank'>Visit Google!</a>
+)
+
 createRoot(document.getElementById('root'))
 .render(
-  MyApp()
+  anotherReactElement
 )
