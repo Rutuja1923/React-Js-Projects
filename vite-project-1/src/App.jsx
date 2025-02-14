@@ -2,12 +2,12 @@ import './App.css';
 import Chai from './Chai.jsx';
 
 function App() {
+  const mentorName = 'Hitesh Choudhary'
   return (
     <>
       <h1>Chai aur React</h1>
-      <p>By Hitesh Choudhary</p>
+      <p>By Our Mentor {mentorName}</p>
       <Chai />
-      <h2></h2>
     </>
   )
 }
