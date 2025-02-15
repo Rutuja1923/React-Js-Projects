@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Catcard({ name, someObj, imgSrc }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -5,7 +7,7 @@ function Catcard({ name, someObj, imgSrc }) {
         <img
           src={imgSrc}
           alt={`${name}'s image`}
-          className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500"
+          className="object-cover object-center w-full rounded-t-md h-72 bg-gray-800  m-4 p-2"
         />
         <div className="flex flex-col justify-between p-6 space-y-8">
           <div className="space-y-2">
@@ -29,4 +31,15 @@ function Catcard({ name, someObj, imgSrc }) {
   );
 }
 
-export default Catcard;
+export default Catcard
+
+Catcard.propTypes = {
+  name: PropTypes.string.isRequired,  
+  someObj: PropTypes.shape(
+    {
+        age: PropTypes.number.isRequired,    
+    favorite: PropTypes.string.isRequired
+    }
+  ).isRequired,
+  imgSrc: PropTypes.string.isRequired 
+};
