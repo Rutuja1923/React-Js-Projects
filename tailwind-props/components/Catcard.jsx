@@ -1,21 +1,20 @@
-
-function Catcard(props) {
-    console.log("props : " , props);
+function Catcard({ name, someObj, imgSrc }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="flex flex-col items-center justify-center min-h-screen max-w-xs rounded-md shadow-md bg-black text-gray-100">
+      <div className="flex flex-col items-center justify-center min-h-screen max-w-xs rounded-md shadow-md bg-black text-gray-100 mb-6">
         <img
-          src="https://cdn.pixabay.com/photo/2022/06/19/04/25/cat-7271017_1280.jpg"
-          alt=""
+          src={imgSrc}
+          alt={`${name}'s image`}
           className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500"
         />
         <div className="flex flex-col justify-between p-6 space-y-8">
           <div className="space-y-2">
-            <h2 className="text-3xl font-semibold tracking-wide">Lorem</h2>
+            <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
             <p className="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Distinctio tempora ipsum soluta amet corporis accusantium aliquid
-              consectetur eaque!
+              {name}, a {someObj.age} year old cat, lived a simple yet
+              delightful life. With her soft fur and playful nature, she spent
+              most of her days purring contentedly, especially when enjoying her
+              favorite meal—{someObj.favorite}.
             </p>
           </div>
           <button
@@ -27,7 +26,7 @@ function Catcard(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Catcard
+export default Catcard;
