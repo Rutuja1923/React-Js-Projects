@@ -1,11 +1,13 @@
 import './App.css';
-import ToggleButton from './ToggleButton';
+import NameForm from './NameForm';
+import NameFormSimple from './NameFormSimple';
 
 function App() {
 
   return (
     <>
-      <ToggleButton />
+      <NameForm />
+      <NameFormSimple />
     </>
   )
 }
