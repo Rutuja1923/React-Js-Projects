@@ -1,11 +1,11 @@
 import './App.css';
-import EvaluatedExpressions from './EvaluatedExpressions';
+import ToggleButton from './ToggleButton';
 
 function App() {
 
   return (
     <>
-      <EvaluatedExpressions/>
+      <ToggleButton />
     </>
   )
 }
