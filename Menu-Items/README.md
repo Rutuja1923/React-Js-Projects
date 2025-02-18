@@ -19,7 +19,7 @@ This is a simple React app that displays a list of food items along with their i
    ```
 2. Navigate to the project directory:
    ```sh
-   cd menu-display-app
+   cd Menu-Items
    ```
 3. Install dependencies:
    ```sh
