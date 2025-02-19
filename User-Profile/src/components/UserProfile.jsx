@@ -2,20 +2,20 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 function UserProfile({ name, age, bio }) {
-  const [currBio, setBio] = useState("");
-  const [btnText, setBtnText] = useState("Show Bio");
+  const [showBio, setShowBio] = useState(false);
 
   const handleShowDetails = () => {
-    setBtnText((prevText) => (prevText === "Show Bio" ? "Hide Bio" : "Show Bio"));
-    setBio((prevBio) => (prevBio === "" ? bio : ""));
+    setShowBio((prev) => !prev);
   };
 
   return (
     <div>
       <h2>{name}</h2>
       <h4>Age : {age}</h4>
-      <p>{currBio}</p>
-      <button onClick={handleShowDetails}>{btnText}</button>
+      {showBio && <p>{bio}</p>}
+      <button onClick={handleShowDetails}>
+        {showBio ? "Hide Bio" : "Show Bio"}
+      </button>
     </div>
   );
 }
