@@ -1,15 +1,21 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 function UserProfile({ name, age, bio }) {
+  const [currBio, setBio] = useState("");
+  const [btnText, setBtnText] = useState("Show Bio");
+
   const handleShowDetails = () => {
-    alert(bio);
+    setBtnText((prevText) => (prevText === "Show Bio" ? "Hide Bio" : "Show Bio"));
+    setBio((prevBio) => (prevBio === "" ? bio : ""));
   };
 
   return (
     <div>
       <h2>{name}</h2>
-      <h4>{age}</h4>
-      <button onClick={handleShowDetails}>Show details</button>
+      <h4>Age : {age}</h4>
+      <p>{currBio}</p>
+      <button onClick={handleShowDetails}>{btnText}</button>
     </div>
   );
 }
@@ -21,5 +27,3 @@ UserProfile.propTypes = {
   age: PropTypes.number.isRequired,
   bio: PropTypes.string.isRequired,
 };
-
-
