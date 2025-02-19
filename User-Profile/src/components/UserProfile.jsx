@@ -1,21 +1,22 @@
-function UserProfile() {
-  const user = {
-      name: "Aarav Mehta",
-      age: 25,
-      bio: "A software engineer passionate about building scalable web applications and exploring new technologies."
-    };
+import PropTypes from "prop-types";
 
-return (
-  <div>
-      <h2>{user.name}</h2>
-      <h4>{user.age}</h4>
+function UserProfile({ name, age, bio }) {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <h4>{age}</h4>
       <p>
-          <strong>Bio:&nbsp;</strong>
-          {user.bio}
+        <strong>Bio:&nbsp;</strong>
+        {bio}
       </p>
-  </div>
-)
+    </div>
+  );
 }
 
-export default UserProfile
+export default UserProfile;
 
+UserProfile.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  bio: PropTypes.string.isRequired,
+};
